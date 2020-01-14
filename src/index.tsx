@@ -1,15 +1,15 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import App from './App';
+import Caption from './Caption';
 
 ReactDOM.render(
-  <App
+  <Caption
   // color="#f00"
   // outlineColor="#0f0"
   // fontWeight="bold"
   // fontSize={24}
   >
     TEST
-  </App>,
+  </Caption>,
   document.getElementById('root')
 );

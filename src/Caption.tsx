@@ -10,7 +10,7 @@ type Props = {
   chilren?: ReactNode;
 };
 
-const App: React.FC<Props> = ({
+const Caption: React.FC<Props> = ({
   color = '#fff',
   outlineColor = '#000',
   fontFamily = '-apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Noto Sans, Ubuntu, Droid Sans, Helvetica Neue, sans-serif',
@@ -40,4 +40,4 @@ const Wrapper = styled.div<Props>`
   font-weight: ${({ fontWeight }) => fontWeight};
 `;
 
-export default App;
+export default Caption;
