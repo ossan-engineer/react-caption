@@ -1,26 +1,43 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React, { ReactNode } from 'react';
+import styled from 'styled-components';
 
-const App: React.FC = () => {
+type Props = {
+  color?: string;
+  outlineColor?: string;
+  fontFamily?: string;
+  fontWeight?: string | number;
+  fontSize?: number;
+  chilren?: ReactNode;
+};
+
+const App: React.FC<Props> = ({
+  color = '#fff',
+  outlineColor = '#000',
+  fontFamily = '-apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Noto Sans, Ubuntu, Droid Sans, Helvetica Neue, sans-serif',
+  fontSize = 16,
+  fontWeight = 'normal',
+  children,
+}) => {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Wrapper
+      color={color}
+      outlineColor={outlineColor}
+      fontFamily={fontFamily}
+      fontSize={fontSize}
+      fontWeight={fontWeight}
+    >
+      {children}
+    </Wrapper>
   );
-}
+};
+
+const Wrapper = styled.div<Props>`
+  color: ${({ color }) => color};
+  text-shadow: ${({ outlineColor }) =>
+    `1px 1px 0 ${outlineColor}, -1px -1px 0 ${outlineColor}, -1px 1px 0 ${outlineColor}, 1px -1px 0 ${outlineColor}, 0px 1px 0 ${outlineColor}, 0 -1px 0 ${outlineColor}, -1px 0 0 ${outlineColor}, 1px 0 0 ${outlineColor}`};
+  font-family: ${({ fontFamily }) => fontFamily};
+  font-size: ${({ fontSize }) => `${fontSize}px`};
+  font-weight: ${({ fontWeight }) => fontWeight};
+`;
 
 export default App;
