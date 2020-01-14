@@ -1,7 +1,20 @@
 {
   "name": "react-caption",
   "version": "0.1.0",
-  "private": true,
+  "private": false,
+  "main": "dist/index.js",
+  "module": "dist/index.js",
+  "babel": {
+    "presets": [
+      "@babel/preset-react",
+      "@babel/preset-env",
+      "@babel/preset-typescript"
+    ]
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/ossan-engineer/react-caption.git"
+  },
   "dependencies": {
     "@testing-library/jest-dom": "^4.2.4",
     "@testing-library/react": "^9.3.2",
@@ -14,7 +27,7 @@
     "react-dom": "^16.12.0",
     "react-scripts": "3.3.0",
     "styled-components": "^5.0.0",
-    "typescript": "~3.7.2"
+    "typescript": "^3.7.4"
   },
   "scripts": {
     "start": "react-scripts start",
@@ -22,7 +35,8 @@
     "test": "react-scripts test",
     "eject": "react-scripts eject",
     "storybook": "start-storybook -p 9009 -s public",
-    "build-storybook": "build-storybook -s public"
+    "build-storybook": "build-storybook -s public",
+    "publish-npm": "rm -rf dist && mkdir dist &&  babel src/Caption --extensions '.ts,.tsx' -d dist --copy-files"
   },
   "eslintConfig": {
     "extends": "react-app"
@@ -40,6 +54,10 @@
     ]
   },
   "devDependencies": {
+    "@babel/cli": "^7.8.3",
+    "@babel/preset-env": "^7.8.3",
+    "@babel/preset-react": "^7.8.3",
+    "@babel/preset-typescript": "^7.8.3",
     "@storybook/addon-actions": "^5.3.3",
     "@storybook/addon-docs": "^5.3.3",
     "@storybook/addon-links": "^5.3.3",
