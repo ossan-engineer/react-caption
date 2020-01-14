@@ -26,7 +26,7 @@ import ReactDOM from 'react-dom';
 import Caption from 'react-caption';
 
 const App = () => {
-  return <Caption>Hello World</Button>;
+  return <Caption>Hello World</Caption>;
 };
 
 ReactDOM.render(<App />, document.querySelector('#app'));
