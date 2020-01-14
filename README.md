@@ -1,3 +1,9 @@
+<h1 align="center">React Caption</h1>
+
+Simple caption for your videos or images.
+
+![image](https://user-images.githubusercontent.com/2215105/72347667-fdcdf780-371b-11ea-8de3-9c1e4aff311d.png)
+
 ## Installation
 
 react-caption is available as an npm package.
@@ -25,3 +31,7 @@ const App = () => {
 
 ReactDOM.render(<App />, document.querySelector('#app'));
 ```
+
+## Demo
+
+https://deserted-copper.surge.sh/
