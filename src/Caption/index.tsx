@@ -8,6 +8,7 @@ type Props = {
   fontWeight?: string | number;
   fontSize?: number;
   chilren?: ReactNode;
+  className?: string;
 };
 
 const Caption: React.FC<Props> = ({
@@ -17,6 +18,7 @@ const Caption: React.FC<Props> = ({
   fontSize = 16,
   fontWeight = 'normal',
   children,
+  className = '',
 }) => {
   return (
     <Wrapper
@@ -25,6 +27,7 @@ const Caption: React.FC<Props> = ({
       fontFamily={fontFamily}
       fontSize={fontSize}
       fontWeight={fontWeight}
+      className={className}
     >
       {children}
     </Wrapper>
